@@ -36,32 +36,32 @@ export default function Products() {
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell>ID</TableCell>
-                            <TableCell>Название</TableCell>
-                            <TableCell>Артикул</TableCell>
-                            <TableCell>Цена закупки</TableCell>
-                            <TableCell>Цена продажи</TableCell>
-                            <TableCell>Вес</TableCell>
-                            <TableCell>Размеры</TableCell>
-                            <TableCell>Категория</TableCell>
-                            <TableCell>Дата создания</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>ID</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Название</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Артикул</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Цена закупки</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Цена продажи</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Вес</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Размеры</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Категория</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Дата создания</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {products.length > 0 ? (
                             products.map((product) => (
                                 <TableRow key={product.id}>
-                                    <TableCell>{product.id}</TableCell>
-                                    <TableCell>{product.name}</TableCell>
-                                    <TableCell>{product.article}</TableCell>
-                                    <TableCell>{product.purchasingPrice} €</TableCell>
-                                    <TableCell>{product.sellingPrice} €</TableCell>
-                                    <TableCell>{product.weight} кг</TableCell>
-                                    <TableCell>
+                                    <TableCell sx={{ borderRight: "1px solid #ddd" }}>{product.id}</TableCell>
+                                    <TableCell sx={{ borderRight: "1px solid #ddd" }}>{product.name}</TableCell>
+                                    <TableCell sx={{ borderRight: "1px solid #ddd" }}>{product.article}</TableCell>
+                                    <TableCell sx={{ borderRight: "1px solid #ddd" }}>{product.purchasingPrice} €</TableCell>
+                                    <TableCell sx={{ borderRight: "1px solid #ddd" }}>{product.sellingPrice} €</TableCell>
+                                    <TableCell sx={{ borderRight: "1px solid #ddd" }}>{product.weight ? `${product.weight} кг`: ""} </TableCell>
+                                    <TableCell sx={{ borderRight: "1px solid #ddd" }}>
                                       {product.newDimensions ? `${product.newDimensions.height} * ${product.newDimensions.length} * ${product.newDimensions.width} м`: ""}
                                     </TableCell>
-                                    <TableCell>{product.productCategory?.name}</TableCell>
-                                    <TableCell>{new Date(product.createdDate).toLocaleDateString()}</TableCell>
+                                    <TableCell sx={{ borderRight: "1px solid #ddd" }}>{product.productCategory?.name}</TableCell>
+                                    <TableCell sx={{ borderRight: "1px solid #ddd" }}>{new Date(product.createdDate).toLocaleDateString()}</TableCell>
                                 </TableRow>
                             ))
                         ) : (
