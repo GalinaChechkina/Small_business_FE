@@ -1,9 +1,9 @@
-import Products from "../features/products/Products"
+import { Button } from "@mui/material"
 
 export default function Home(){
     return(
         <div>
-          <Products />
+          <Button variant="contained" color="primary"> Нажми меня </Button>
       </div>
     )
 }

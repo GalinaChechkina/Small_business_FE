@@ -10,6 +10,10 @@ const StyledNavLink = styled(NavLink)(({ theme }) => ({
   "&:hover": {
     color: theme.palette.secondary.main,
   },
+  "&.active": {
+    color: theme.palette.secondary.light, // Цвет активного элемента
+    fontWeight: "bold",
+  },
 }));
 
 export default function HeaderApp() {
@@ -19,7 +23,7 @@ export default function HeaderApp() {
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
         MyApp
         </Typography>
-        <StyledNavLink to="/">Home</StyledNavLink>
+        <StyledNavLink to="/" end>Home</StyledNavLink>
         <StyledNavLink to="/products">Products</StyledNavLink>
         <StyledNavLink to="/sales">Sales</StyledNavLink>
         <StyledNavLink to="/purchases">Purchases</StyledNavLink>

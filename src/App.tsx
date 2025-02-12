@@ -4,6 +4,7 @@ import Layout from "./components/Layout"
 import { Route, Routes } from 'react-router-dom';
 import NoSuchPage from './components/NoSuchPage';
 import Home from './components/Home';
+import Products from './components/Products';
 
 function App() {
   
@@ -13,7 +14,8 @@ function App() {
     <div className="App"  style={{ textAlign: "center", marginTop: "50px" }}>
       <Routes>
         <Route path = "/" element = {<Layout/>} >   
-          <Route index element={<Home />} />                  
+          <Route index element={<Home />} />  
+          <Route path="/products" element={<Products />} />                
           <Route path="*" element={<NoSuchPage />} />
         </Route>
       </Routes>
