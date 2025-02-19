@@ -20,7 +20,7 @@ export default function Products() {
         <Container>
             {/* Верхняя панель с заголовком и селектом */}
             <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
-                <Typography variant="h4">Список продуктов</Typography>
+                <Typography variant="h4">Waren</Typography>
                 <Select
                     value={pageSize}
                     onChange={(e) => setPageSize(Number(e.target.value))}
@@ -37,13 +37,15 @@ export default function Products() {
                     <TableHead>
                         <TableRow>
                             <TableCell sx={{ borderRight: "1px solid #ddd" }}>ID</TableCell>
-                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Название</TableCell>
-                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Артикул</TableCell>
-                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Цена закупки</TableCell>
-                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Цена продажи</TableCell>
-                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Вес</TableCell>
-                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Размеры</TableCell>
-                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Категория</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Name</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Artikel</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Artikel des Lieferant</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Anschaffungspreis</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Verkaufspreis</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Maßeinheit</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Gewicht</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Abmessungen</TableCell>
+                            <TableCell sx={{ borderRight: "1px solid #ddd" }}>Kategorie</TableCell>
                             <TableCell sx={{ borderRight: "1px solid #ddd" }}>Дата создания</TableCell>
                         </TableRow>
                     </TableHead>
@@ -54,8 +56,10 @@ export default function Products() {
                                     <TableCell sx={{ borderRight: "1px solid #ddd" }}>{product.id}</TableCell>
                                     <TableCell sx={{ borderRight: "1px solid #ddd" }}>{product.name}</TableCell>
                                     <TableCell sx={{ borderRight: "1px solid #ddd" }}>{product.article}</TableCell>
+                                    <TableCell sx={{ borderRight: "1px solid #ddd" }}>{product.vendorArticle}</TableCell>
                                     <TableCell sx={{ borderRight: "1px solid #ddd" }}>{product.purchasingPrice} €</TableCell>
                                     <TableCell sx={{ borderRight: "1px solid #ddd" }}>{product.sellingPrice} €</TableCell>
+                                    <TableCell sx={{ borderRight: "1px solid #ddd" }}>{product.unitOfMeasurement}</TableCell>
                                     <TableCell sx={{ borderRight: "1px solid #ddd" }}>{product.weight ? `${product.weight} кг`: ""} </TableCell>
                                     <TableCell sx={{ borderRight: "1px solid #ddd" }}>
                                       {product.newDimensions ? `${product.newDimensions.height} * ${product.newDimensions.length} * ${product.newDimensions.width} м`: ""}
